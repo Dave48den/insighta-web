@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
-import Account from "./pages/Account";
+import Account from "./pages/Account.jsx";
 
 import Login from "./pages/Login";
 import GithubCallback from "./pages/GithubCallback";
