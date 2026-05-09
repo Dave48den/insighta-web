@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../config";
 
 const GithubCallback = () => {
 
@@ -14,7 +15,7 @@ const GithubCallback = () => {
         if (code) {
 
             axios.get(
-                `http://localhost:8080/auth/github/callback?code=${code}`
+                `${API_URL}/auth/github/callback?code=${code}`
             )
                 .then((res) => {
 

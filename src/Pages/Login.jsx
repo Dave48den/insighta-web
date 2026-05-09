@@ -5,7 +5,7 @@ const Login = () => {
         const clientId = "Ov23libTKVOGGXySyEwe";
 
         const redirectUri =
-            "http://localhost:5173/auth/github/callback";
+            `${window.location.origin}/auth/github/callback`;
 
         window.location.href =
             `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user:email`;
@@ -13,11 +13,13 @@ const Login = () => {
 
     return (
         <div style={{ padding: "40px" }}>
+
             <h1>Insighta Labs</h1>
 
             <button onClick={handleLogin}>
                 Continue with GitHub
             </button>
+
         </div>
     );
 };

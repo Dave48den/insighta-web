@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "../config";
 
 const Profiles = () => {
 
@@ -11,7 +12,7 @@ const Profiles = () => {
         const token = localStorage.getItem("token");
 
         axios.get(
-            "http://localhost:8080/api/profiles",
+            `${API_URL}/api/profiles`,
             {
                 headers: {
                     Authorization: `Bearer ${token}`,
